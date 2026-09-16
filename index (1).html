@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salada de Frutas da Medicina — A Velha Guarda Convida</title>
+<meta name="description" content="Um espaço aberto para compartilhar conhecimento: casos clínicos, história, ofícios, plantas, remédios caseiros e o que a velha guarda quiser deixar para quem vem depois.">
+<style>
+body{font-family:Georgia,serif;background:#faf6ee;color:#1f1a14;line-height:1.75;margin:0;padding:0;font-size:17px}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+header{background:#fff;border-bottom:1px solid #e6ddcc;padding:18px 0;text-align:center}
+header .brand{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:4px}
+header h1{font-size:1.1rem;margin:0;color:#8b3a2f}
+header p{font-size:.82rem;color:#6b6257;margin:4px 0 0}
+.roma{display:inline-block;vertical-align:middle}
+.hero{background:linear-gradient(180deg,#fff,#faf6ee);padding:70px 0 60px;border-bottom:1px solid #e6ddcc;text-align:center}
+.hero .kicker{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:#8b3a2f;font-weight:600;font-family:Arial,sans-serif}
+.hero h2{font-size:2rem;line-height:1.25;margin:18px auto 22px;max-width:700px}
+.hero p.lead{font-size:1.05rem;color:#6b6257;max-width:620px;margin:0 auto 30px}
+.btn{display:inline-block;font-family:Arial,sans-serif;font-size:.92rem;font-weight:600;padding:12px 24px;border-radius:10px;text-decoration:none;margin:0 5px}
+.btn-primary{background:#8b3a2f;color:#fff}
+.btn-outline{color:#8b3a2f;border:2px solid #8b3a2f}
+section{padding:60px 0}
+section.alt{background:#fff;border-top:1px solid #e6ddcc;border-bottom:1px solid #e6ddcc}
+h3.section-title{font-size:1.5rem;margin-bottom:10px;line-height:1.3}
+p.section-sub{color:#6b6257;margin-bottom:35px}
+.card{background:#fff;border:1px solid #e6ddcc;border-radius:14px;padding:28px 26px;margin-bottom:20px}
+.card.featured{border:2px solid #e0c9c2}
+.tag{display:inline-block;font-family:Arial,sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8b3a2f;background:#f7ede9;padding:5px 12px;border-radius:20px;margin-bottom:14px}
+.tag-soon{color:#4a6b3a;background:#eef3ea}
+.card h4{font-size:1.1rem;margin:0 0 8px;line-height:1.4}
+.card .author{font-size:.82rem;color:#6b6257;font-style:italic;margin-bottom:12px}
+.card p{font-size:.94rem;color:#6b6257;margin-bottom:18px}
+.step{background:#faf6ee;border:1px solid #e6ddcc;border-radius:14px;padding:26px;margin-bottom:18px}
+.step .num{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:#8b3a2f;color:#fff;font-family:Arial,sans-serif;font-weight:700;margin-bottom:12px}
+.step h4{font-size:1.02rem;margin:0 0 8px}
+.step p{font-size:.92rem;color:#6b6257;margin:0}
+.cta{background:#f7ede9;border:1px solid #e6d0c9;border-radius:14px;padding:36px 30px;text-align:center;margin-top:30px}
+.cta h4{font-size:1.2rem;margin:0 0 10px}
+.cta p{color:#6b6257;margin-bottom:20px}
+.email-box{display:inline-block;background:#fff;border:2px solid #e6d0c9;border-radius:12px;padding:16px 26px;margin:10px 0 16px;font-family:'Courier New',monospace;font-size:1.1rem;color:#8b3a2f;font-weight:700}
+.email-box a{color:#8b3a2f;text-decoration:none;word-break:break-all}
+.email-box a:hover{text-decoration:underline}
+.quote{border-left:4px solid #8b3a2f;padding:6px 0 6px 20px;margin:22px 0 28px;font-size:1.15rem;font-style:italic;color:#6e2b22}
+.box{background:#f7ede9;border-left:3px solid #8b3a2f;padding:16px 20px;border-radius:0 8px 8px 0;margin:18px 0;font-size:.9rem;color:#6e2b22}
+/* Prosa */
+.prosa{font-size:1.02rem;color:#3a322b}
+.prosa p{margin-bottom:18px;text-align:justify}
+.prosa strong{color:#8b3a2f}
+.prosa em{color:#6e2b22}
+/* Carta */
+.carta{background:#fffdf7;border:1px solid #e6d0c9;border-left:5px solid #8b3a2f;border-radius:0 14px 14px 0;padding:34px 34px 30px;margin-top:20px}
+.carta .data{font-size:.85rem;color:#8a7d6f;font-style:italic;margin-bottom:22px;text-align:right}
+.carta h4{font-size:1.15rem;margin:0 0 14px;color:#8b3a2f}
+.carta h4.dest{margin-top:30px;font-size:1rem;color:#3a322b;font-weight:700}
+.carta p{font-size:.98rem;color:#3a322b;margin-bottom:14px;text-align:justify}
+.carta p:last-child{margin-bottom:0}
+.carta .assinatura{margin-top:26px;font-style:italic;color:#6e2b22;text-align:right}
+/* Dupla de imagens */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0}
+.duo figure{margin:0;background:#fff;border:1px solid #e6ddcc;border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(60,40,20,.06)}
+.duo img{display:block;width:100%;height:240px;object-fit:cover}
+.duo figcaption{font-size:.78rem;color:#8a7d6f;padding:10px 14px;font-style:italic;line-height:1.5;background:#faf6ee}
+/* Faixa azul Egeu com Aristóteles */
+.egeu{position:relative;border-radius:14px;overflow:hidden;margin:24px 0;background:linear-gradient(180deg,#1e5f9e 0%,#2b7fc4 45%,#5aa8dd 100%);min-height:260px;display:flex;align-items:center;justify-content:center}
+.egeu .mar{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.egeu .busto{position:relative;z-index:2;max-height:300px;width:auto;filter:drop-shadow(0 6px 18px rgba(0,0,0,.35))}
+.egeu .legenda{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(0,0,0,.55),transparent);color:#fff;font-size:.82rem;font-style:italic;padding:26px 18px 12px;text-align:center;z-index:3}
+ul{padding-left:22px;color:#6b6257;line-height:2}
+footer{background:#2a221b;color:#d9cfc2;padding:50px 0 35px;text-align:center;font-size:.85rem}
+footer .title{font-size:1.05rem;color:#fff;margin:0 0 6px}
+footer .sub{color:#a89a8a;margin:0 0 18px}
+footer a{color:#e8b9ab;text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer .note{font-size:.75rem;color:#8a7d6f;max-width:480px;margin:18px auto 0;line-height:1.6}
+.footnote{font-size:.78rem;color:#8a7d6f;font-style:italic;text-align:center;margin-top:20px;line-height:1.6}
+@media(max-width:640px){body{font-size:16px}.hero{padding:50px 0 40px}.hero h2{font-size:1.5rem}section{padding:45px 0}.card,.step,.cta,.carta{padding:22px 18px}.email-box{font-size:.92rem;padding:12px 16px}.duo{grid-template-columns:1fr}.duo img{height:200px}.egeu{min-height:200px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <svg class="roma" viewBox="0 0 40 40" width="30" height="30" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M 14 8 L 13 3 L 16 5 L 18 1 L 20 4 L 22 1 L 24 5 L 27 3 L 26 8 Z" fill="#7a2424"/>
+        <circle cx="20" cy="23" r="14" fill="#a83232"/>
+        <ellipse cx="15" cy="19" rx="4" ry="5" fill="#c14545" opacity="0.55"/>
+        <g fill="#e8b9ab" opacity="0.55">
+          <circle cx="17" cy="24" r="1.3"/><circle cx="21" cy="22" r="1.3"/>
+          <circle cx="24" cy="25" r="1.3"/><circle cx="19" cy="28" r="1.3"/>
+          <circle cx="23" cy="29" r="1.3"/>
+        </g>
+      </svg>
+      <h1>Salada de Frutas da Medicina</h1>
+    </div>
+    <p>A Velha Guarda Convida</p>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">Um rio que corre</p>
+    <h2>Conhecimento que não se guarda — se passa adiante.</h2>
+    <p class="lead">
+      Aqui a velha guarda da medicina deixa o que aprendeu fazendo: casos que ninguém
+      mais viu, plantas que curam, ofícios que se perdem, histórias que merecem continuar.
+      E os novatos — mesmo os preguiçosos — podem beber dessa água.
+    </p>
+    <a href="#recado" class="btn btn-primary">Recado de hoje</a>
+    <a href="#acervo" class="btn btn-outline">Ver o acervo</a>
+  </div>
+</section>
+
+<!-- ===== RECADO DE HOJE / CARTA ABERTA ===== -->
+<section id="recado" class="alt">
+  <div class="wrap">
+    <p class="kicker" style="font-family:Arial,sans-serif;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:#8b3a2f;font-weight:600">Recado de hoje · Carta aberta</p>
+    <h3 class="section-title">Um convite e um lembrete</h3>
+    <p class="section-sub">Publicado pela autora deste espaço. Palavra dela — com um sorriso no canto da boca.</p>
+
+    <div class="egeu">
+      <img class="mar" src="https://commons.wikimedia.org/wiki/Special:FilePath/Aegean%20Sea.jpg" alt="Mar Egeu" onerror="this.style.display='none'">
+      <img class="busto" src="https://commons.wikimedia.org/wiki/Special:FilePath/Aristotle%20Altemps%20Inv8575.jpg" alt="Busto de Aristóteles" onerror="this.style.display='none'">
+      <span class="legenda">Aristóteles sobre o Egeu — porque foi ele, em 384 a.C., quem primeiro descreveu as vesículas do cisticerco no porco</span>
+    </div>
+
+    <div class="carta">
+      <p class="data">16 de setembro de 2026</p>
+
+      <h4>Convite aos doutores de plantão</h4>
+      <p>
+        Ao <strong>Dr. Jorge</strong> e à <strong>Dra. Claudia</strong>, que hoje estão de plantão
+        na Maternidade do Policlin:
+      </p>
+      <p>
+        Vocês dois, juntos, somam mais de oitenta anos de medicina. Isso não é pouca coisa —
+        é quase um século de plantão, de madrugada acordada, de recém-nascido que chora e mãe
+        que respira aliviada. É gente que já viu de tudo e continua ali, batendo ponto, como
+        se fosse o primeiro dia.
+      </p>
+      <p>
+        Faço um convite, meio a sério, meio brincando: passem por aqui e deixem um pedaço do
+        que sabem. Pode ser um caso, uma história de plantão, uma frase que alguém disse e
+        vocês nunca esqueceram, uma receita que aprenderam com quem já se foi. Não precisa ser
+        bonito nem comprido. Precisa ser de vocês.
+      </p>
+      <p>
+        E se der preguiça de escrever — o que eu entendo perfeitamente —, mandem um áudio.
+        Se der preguiça de gravar, contem para alguém que escreva. O importante é não deixar
+        o rio secar.
+      </p>
+
+      <h4 class="dest">Lembrete ao Dr. Aluísio</h4>
+      <p>
+        Ao <strong>Dr. Aluísio</strong>, dono do hospital:
+      </p>
+      <p>
+        Sei que o senhor tem muito o que fazer. Hospital não se administra sozinho, e ninguém
+        aqui ignora o peso disso. Então prometo ser breve.
+      </p>
+      <p>
+        O senhor tem, debaixo do seu teto, médicos com <strong>quarenta anos de profissão</strong>
+        que continuam trabalhando. Gente que sabe onde fica cada corredor, cada leito, cada
+        nome. Gente que já viu o hospital mudar de cara umas quantas vezes — e continuou ali,
+        firme, quando ninguém mais queria o plantão.
+      </p>
+      <p>
+        Quarenta anos de estrada não é peso. É <em>acervo</em>. É quase um livro inteiro de
+        medicina guardado nos corredores, sem precisar de estante e sem ocupar espaço.
+      </p>
+      <p>
+        Cuide deles como se fossem a coisa mais valiosa do hospital. Porque, olhando bem,
+        são.
+      </p>
+
+      <p class="assinatura">— Eleni Aparecida Bedaque</p>
+    </div>
+
+    <p style="font-size:.82rem;color:#8a7d6f;text-align:center;margin-top:24px;font-style:italic">
+      Esta carta é opinião da autora. O espaço permanece aberto a todos — inclusive aos que aqui são mencionados.
+    </p>
+  </div>
+</section>
+
+<section id="acervo">
+  <div class="wrap">
+    <h3 class="section-title">O que já está na mesa</h3>
+    <p class="section-sub">Começamos com um trabalho que levou anos para nascer. Outros virão.</p>
+
+    <div class="card featured">
+      <span class="tag">Neurocisticercose</span>
+      <h4>Neurocisticercose: aspectos clínicos, epidemiológicos e análise de 171 prontuários do Instituto de Infectologia Emílio Ribas (1980–1990)</h4>
+      <p class="author">Eleni Aparecida Bedaque · 2003 · Dissertação de Mestrado</p>
+      <p>
+        Um dos poucos estudos brasileiros que acompanharam longitudinalmente pacientes
+        com neurocisticercose por mais de uma década. Documenta o que muitos ainda ignoram:
+        a doença raramente é reconhecida no primeiro atendimento. Mais da metade dos 171
+        pacientes foi diagnosticada erroneamente como meningite bacteriana.
+      </p>
+      <a href="#trabalho" class="btn btn-primary">Ler o trabalho completo</a>
+    </div>
+
+    <div class="card">
+      <span class="tag tag-soon">Em breve</span>
+      <h4>Seu material aqui</h4>
+      <p>
+        Um caso clínico, uma observação de consultório, uma receita de família, uma história
+        da cidade, uma planta que cura. Tudo cabe. Este espaço está reservado para o que você
+        quiser deixar.
+      </p>
+      <a href="#contribuir" class="btn btn-outline">Como contribuir</a>
+    </div>
+
+    <div class="card">
+      <span class="tag tag-soon">Em breve</span>
+      <h4>Da velha guarda para os novatos</h4>
+      <p>
+        Histórias, ofícios, práticas que só se aprendem fazendo. Se você tem algo que não
+        está nos livros, é aqui que ele vive.
+      </p>
+      <a href="#contribuir" class="btn btn-outline">Como contribuir</a>
+    </div>
+  </div>
+</section>
+
+<section id="contribuir" class="alt">
+  <div class="wrap">
+    <h3 class="section-title">Como deixar sua parte</h3>
+    <p class="section-sub">Você não precisa saber programar. Precisa só querer passar adiante.</p>
+
+    <div class="step">
+      <div class="num">1</div>
+      <h4>Escreva do jeito que der</h4>
+      <p>Um texto no Word, um áudio no celular, uma foto de um caderno antigo, uma carta. Não precisa ser bonito. Precisa ser verdadeiro.</p>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <h4>Mande para nós</h4>
+      <p>Escreva para o e-mail abaixo. Pode anexar texto, foto, áudio — do jeito que for mais fácil. Se preferir, alguém da equipe transcreve e formata para você.</p>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <h4>A gente põe na mesa</h4>
+      <p>Seu material ganha uma página própria, com seu nome. Fica disponível para sempre, para qualquer pessoa, em qualquer lugar do mundo.</p>
+    </div>
+
+    <div class="cta">
+      <h4>Quer contribuir agora?</h4>
+      <p>Escreva para este e-mail — é só clicar e escrever, sem precisar de programa nenhum:</p>
+      <div class="email-box">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=punicarodas@gmail.com" target="_blank" rel="noopener">punicarodas@gmail.com</a>
+      </div>
+      <p style="font-size:.82rem;color:#8a7d6f;margin:0">Se preferir copiar o endereço, selecione o texto acima.</p>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap">
+    <h3 class="section-title">Sobre o projeto</h3>
+    <p class="quote">"Um livro ou o conhecimento é como um rio: deve correr."</p>
+    <p>Quantos casos você viu que nunca viraram artigo? Quantas observações clínicas ficaram guardadas num caderno, num prontuário, na memória? Quanto conhecimento se perdeu porque não havia onde colocar?</p>
+    <p>Este espaço é para isso. Não é um repositório acadêmico. É uma mesa de cozinha onde cada um traz o que tem, e o que sai é uma salada de frutas — misturada, colorida, nutritiva, e melhor do que qualquer fruta sozinha.</p>
+    <p>A velha guarda tem o que ninguém mais tem: <strong>série de casos acompanhados por décadas</strong>. Isso não está nos livros. E se não for passado adiante, desaparece.</p>
+
+    <h4 style="margin-top:35px;font-size:1.1rem">O que cabe aqui</h4>
+    <ul>
+      <li>Casos clínicos e observações de consultório</li>
+      <li>História da medicina, da cidade, da instituição</li>
+      <li>Ofícios e práticas que se aprendem fazendo</li>
+      <li>Culinária, plantas, remédios caseiros</li>
+      <li>Pesquisas acadêmicas que merecem continuar vivas</li>
+      <li>Qualquer coisa que você queira deixar para quem vem depois</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== TRABALHO COMPLETO — EM PROSA ===== -->
+<section id="trabalho" class="alt">
+  <div class="wrap">
+    <p class="kicker" style="font-family:Arial,sans-serif;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:#8b3a2f;font-weight:600">Acervo · Neurocisticercose</p>
+    <h3 class="section-title">Neurocisticercose</h3>
+    <p class="section-sub">Aspectos clínicos, epidemiológicos e análise de 171 prontuários do Instituto de Infectologia Emílio Ribas (1980–1990)</p>
+    <p style="font-size:.9rem;color:#6b6257;font-style:italic;margin-bottom:25px">
+      Eleni Aparecida Bedaque · Dissertação de Mestrado · 2003<br>
+      Orientadora: Profª. Dra. Adele Caterino de Araújo<br>
+      Coordenação dos Institutos de Pesquisa — Secretaria de Estado da Saúde de São Paulo
+    </p>
+
+    <div class="prosa" style="margin-top:30px">
+
+      <h4 style="font-size:1.15rem;margin:0 0 14px;color:#8b3a2f">A história de 171 prontuários</h4>
+
+      <p>
+        Durante onze anos, entre janeiro de 1980 e dezembro de 1990, o Instituto de Infectologia
+        Emílio Ribas registrou 171 pacientes com neurocisticercose. Não eram números numa planilha
+        — eram pessoas. Gente que chegou ao Pronto Socorro com dor de cabeça, convulsão, confusão
+        mental. Gente que, muitas vezes, foi internada com outro diagnóstico e só depois se
+        descobriu o que realmente tinha.
+      </p>
+
+      <p>
+        A média de idade era de <strong>30 anos</strong>. O mais novo tinha 1 ano; o mais velho, 70.
+        A maioria — quase dois terços — estava entre os 20 e os 40 anos, na flor da vida produtiva.
+        Havia mais mulheres (92) do que homens (79), uma diferença discreta, mas que aparecia em
+        todos os recortes.
+      </p>
+
+      <p>
+        A procedência contava uma história sobre o Brasil. Seis em cada dez pacientes vinham da
+        Região Sudeste — 73 de São Paulo, 31 de Minas Gerais. Do Nordeste, 23 da Bahia, 7 do Ceará,
+        5 de Pernambuco, 5 da Paraíba. Do Sul, 14 do Paraná. Da Região Norte, apenas um caso, de
+        Rondônia. A doença não escolhia Estado, mas escolhia a pobreza: onde faltava saneamento,
+        faltava higiene, e a tênia encontrava seu caminho.
+      </p>
+
+      <p>
+        Os antecedentes contavam o resto da história. Quase todos os pacientes tinham contato com
+        criação de porcos, moradia em zona rural, ou o hábito de comer carne suína crua ou mal
+        cozida. Alguns tinham tênia eles mesmos, ou um convivente tinha. Eram pistas que estavam
+        ali, à espera de quem quisesse perguntar.
+      </p>
+
+      <p>
+        O líquor, quando examinado, contava o que o corpo estava sofrendo. Em quase
+        <strong>60% dos pacientes</strong>, a glicose estava abaixo de 50 mg/dl — sinal de que havia
+        inflamação nas meninges. A celularidade variava de 1 célula a mais de 17 mil, com média de
+        735 e mediana de 436. Havia de tudo: linfócitos predominavam (64,5%), mas neutrófilos
+        apareciam em 27% e eosinófilos em 7% — estes últimos, quando presentes, eram quase uma
+        assinatura da parasitose.
+      </p>
+
+      <p>
+        Os exames imunológicos traziam outro retrato. A fixação de complemento reagia em
+        <strong>65,9%</strong> dos casos. A imunofluorescência indireta, em <strong>86,3%</strong>.
+        A hemaglutinação passiva, em <strong>86%</strong>. E aqui havia um achado que a autora
+        considerou precioso: as duas últimas técnicas tinham sensibilidade semelhante, mas
+        <em>detectavam casos diferentes</em>. Ou seja — usadas juntas, encontravam mais do que
+        usadas sozinhas. Um detalhe simples, mas que podia mudar o destino de um paciente.
+      </p>
+
+      <p>
+        Mas o dado que mais dói é outro. O diagnóstico de neurocisticercose foi firmado à admissão
+        em apenas <strong>45% dos casos</strong>. Os outros 55% foram confundidos com meningite
+        bacteriana, meningite viral, meningite tuberculosa, meningite indeterminada, processo
+        expansivo intracraniano, tumor cerebral. Gente que entrou no hospital com um diagnóstico e
+        saiu com outro. Gente que ficou dias — às vezes semanas — recebendo tratamento para a
+        doença errada, enquanto a verdadeira seguia seu curso.
+      </p>
+
+      <p>
+        É esse o retrato que a autora chama de <em>"doença omitida"</em>. Não porque os médicos
+        fossem ruins — mas porque a neurocisticercose, quando se apresenta de forma subaguda, imita
+        tudo. Imita meningite. Imita tumor. Imita AVC. E o interrogatório apressado do Pronto
+        Socorro, feito em minutos, raramente chega às perguntas que revelariam a verdade.
+      </p>
+
+      <p>
+        A forma racemosa, em particular, era a mais traiçoeira. Não seguia o ciclo dos cistos
+        parenquimatosos — não degenerava, não calcificava, não dava trégua. Ficava ali, no espaço
+        subaracnóideo, proliferando em silêncio. Quando finalmente se manifestava, já era
+        aracnoidite, meningite crônica, hidrocefalia. Já era tarde para o diagnóstico fácil.
+      </p>
+
+      <p>
+        A dissertação termina com uma recomendação simples e teimosa: <strong>é preciso
+        perguntar</strong>. Perguntar sobre a dor de cabeça que volta. Sobre a convulsão que
+        apareceu do nada. Sobre a carne de porco mal cozida. Sobre a zona rural onde se morou na
+        infância. Sobre o parente que tem tênia. Perguntar com tempo, com atenção, com método —
+        porque é nessas perguntas que a neurocisticercose se revela.
+      </p>
+
+      <p>
+        Vinte e três anos depois, esse recado continua atual. E é por isso que ele está aqui, num
+        lugar onde qualquer um pode ler. Não para substituir o livro, mas para lembrar o que o
+        livro, às vezes, esquece: que por trás de cada estatística houve uma pessoa, e que por
+        trás de cada diagnóstico perdido houve um tempo que não volta.
+      </p>
+
+      <h4 style="font-size:1.15rem;margin:40px 0 8px;color:#8b3a2f">O tratamento antigo — a romãzeira</h4>
+
+      <p>
+        Antes do praziquantel, antes do albendazol, tratava-se tênia com o que a terra dava.
+        Entre os tenífugos mais usados estava a <strong>pelletierina</strong>, um alcaloide extraído
+        da casca da raiz e do tronco da romãzeira — <em>Punica granatum</em>. Foi isolada em 1879
+        pelo farmacêutico parisiense Tanret, e durante décadas foi um dos recursos mais eficazes
+        contra a solitária.
+      </p>
+
+      <p>
+        Havia um método quase ritual para usá-la. Na véspera, "desembaraçava-se" o intestino com
+        clister de água morna e um purgante leve; a pessoa jejuava à noite. Na manhã seguinte,
+        tomava o sulfato de pelletierina dissolvido em água com tanino, e esperava. Um quarto de
+        hora depois, vinham vertigens passageiras. Duas a quatro horas mais tarde, a tênia saía —
+        com a cabeça. Recomendava-se evacuar em urinol com água morna, à temperatura do corpo,
+        para que o verme não sentisse a variação e não se rompesse antes de sair inteiro.
+      </p>
+    </div>
+
+    <div class="duo">
+      <figure>
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pomegranate%20flower.jpg" alt="Flor da romãzeira (Punica granatum)" onerror="this.parentElement.style.display='none'">
+        <figcaption>Flor da romãzeira (<em>Punica granatum</em>) — de suas raízes e cascas extraía-se a pelletierina</figcaption>
+      </figure>
+      <figure>
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pomegranate%20fruit%20-%20whole%20and%20piece%20with%20arils.jpg" alt="Fruto da romãzeira aberto, com sementes" onerror="this.parentElement.style.display='none'">
+        <figcaption>O fruto aberto — a romã que dá nome a este espaço e lembra o tempo em que se curava com o que a terra oferecia</figcaption>
+      </figure>
+    </div>
+
+    <div class="prosa">
+      <p>
+        A romã que abre este espaço, portanto, não é enfeite. É memória. É o fio que liga o
+        conhecimento antigo ao novo — e a lembrança de que, antes de existirem comprimidos e
+        protocolos, já havia gente observando, testando e passando adiante o que descobria.
+      </p>
+
+      <h4 style="font-size:1.15rem;margin:36px 0 14px;color:#8b3a2f">Um pouco de contexto</h4>
+
+      <p>
+        A neurocisticercose é a parasitose do sistema nervoso central mais frequente no mundo.
+        Em algumas regiões do México, atinge 7% da população; na ilha de Papua Nova Guiné, chega
+        a 18% entre os Ekari. A Organização Mundial da Saúde estima 50 milhões de pessoas
+        acometidas, e 50 mil mortes por ano.
+      </p>
+
+      <p>
+        A forma racemosa foi descrita por Virchow, em 1860, que viu numerosas vesículas na base
+        do crânio com aparência de cacho de uva. Zenker, em 1882, batizou-a de
+        <em>Cysticercus racemosus</em>. O nome ficou. O mistério, em parte, também.
+      </p>
+    </div>
+
+    <div class="cta">
+      <h4>Quer ler o trabalho completo?</h4>
+      <p>O texto integral da dissertação está preservado e disponível para download.</p>
+      <a href="https://vdoc.pub/documents/neurocisticercose-aspectos-clinicos-epidemiologicos-e-analise-de-171-prontuarios-do-ii-emilio-ribas-33sscej9b2rg" class="btn btn-primary" target="_blank" rel="noopener">Abrir PDF completo</a>
+    </div>
+
+    <p style="text-align:center;margin-top:30px;font-size:.85rem;color:#6b6257;font-style:italic">"Um livro ou o conhecimento é como um rio: deve correr."</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="title">Salada de Frutas da Medicina</p>
+    <p class="sub">A Velha Guarda Convida · Um rio que corre</p>
+    <p style="margin:14px 0 6px">
+      Contato: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=punicarodas@gmail.com" target="_blank" rel="noopener">punicarodas@gmail.com</a>
+    </p>
+    <p class="note">Conteúdo aberto, gratuito e para sempre. Nenhum dado de paciente é divulgado sem autorização.</p>
+  </div>
+</footer>
+
+</body>
+</html>
